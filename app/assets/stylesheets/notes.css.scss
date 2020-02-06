@@ -1,0 +1,28 @@
+h1 {
+	margin: 2rem !important;
+}
+
+#all_notes {
+	margin-top: 1rem;
+	h2, p {
+		margin-left: 55px;
+	}
+	.note_in_list {
+		background-color: rgba(168, 176, 189, 0.5);
+	    margin: 25px;
+	    border-radius: 10px;
+	    padding: 5px
+	}
+}
+
+#lone_note {
+	p {
+		margin-left: 2rem;
+	}
+	.note_container {
+		background-color: rgba(168, 176, 189, 0.5);
+	    margin: 25px;
+	    border-radius: 10px;
+	    padding: 5px;
+	}
+}

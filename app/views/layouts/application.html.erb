@@ -1,16 +1,29 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>NoteApp</title>
+    <title>Notes Application</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
   <body>
+    <header>
+    <div class="header_inner" %>
+      <%= link_to image_tag('note_icon.png'), root_path, id: "logo" %>
+      <nav>
+        <% if user_signed_in? %>
+        <div class="flash_notice">
+          <%= flash[:notice] %>
+        </div>
+          <%= link_to "New Note", new_note_path %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Log in", new_user_session_path %>
+        <% end %>
+      </nav>
+      </header>
     <%= yield %>
   </body>
 </html>

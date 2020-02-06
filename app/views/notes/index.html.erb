@@ -1,12 +1,14 @@
 <div id="all_notes">
 	<h1>All notes</h1>
 	<% @notes.each do |note| %>
+	<div class="note_in_list">
 		<h2>
 		<%= link_to note.title, note %>
 		</h2>
 		<p>
 		<%= time_ago_in_words(note.created_at) %>
 		</p>
+	</div>
 	<% end %>
 	<%= link_to "Create a new note", new_note_path %>
 </div>
