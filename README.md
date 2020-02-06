@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+to run this project execute the following commands in a git initialized file in your terminal
 
-Things you may want to cover:
+git clone https://github.com/GESAlkimi/Note_App.git
 
-* Ruby version
+cd note_app
 
-* System dependencies
+bundle install
 
-* Configuration
+rake db:migrate
 
-* Database creation
+rails server
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
